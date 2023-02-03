@@ -39,6 +39,9 @@
                 }
             }
         }
+        .menubar{
+            display: none;
+        }
     }
     //headercontent
     .header--content{
@@ -388,6 +391,7 @@ border-radius: 6.72761px;
             p{
                 font-size: 1rem;
                 font-weight: 800;
+                margin-bottom: 10px;
                 span{
                     color: red;
                 }
@@ -549,19 +553,35 @@ border-radius: 6.72761px;
 @media(max-width:767px){
     .header{
         .nav{
-            flex-direction: column;
-            align-items: flex-start;
-            position:relative;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
             &--menu{
+                display: none;
+                &__items{
+                    font-size: 1.2rem;
+                    padding: 10px;
+                }
+            }
+            .mobile__menu{
+                display: block;
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: flex-start;
+                gap: 10px;
+                padding: 10px;
                 position: absolute;
-                right: -200px;
+                top: 80px;
+                right: 0px;
+                background: #838cb9;
+                transition: all 1s;
             }
             .active{
                 border: none;
                 padding: 0;
+            }
+            .menubar{
+                display: block;
             }
         }
         
@@ -616,4 +636,63 @@ border-radius: 6.72761px;
             }
         }
     }
+    .highlights--container{
+        flex-direction: column-reverse;
+        margin-top: 50px;
+        &__images{
+            flex-direction: column;
+            .row_1{
+                flex-direction: column;
+                .flexi,.happy{
+                    align-self: center;
+                    width: 270px;
+                    height: 270px;
+                }
+            }
+            .row_2{
+                flex-direction: column;
+                .clean,.roommate{
+                    align-self: center;
+                    width: 270px;
+                    height: 270px;
+                }
+            }
+        }
+        &__text{
+            &__button{
+                align-self: center;
+            }
+        }
+    }
+    .newproperty--container{
+        .info{
+            text-align: left;
+        }
+        &__addproperty{
+            .add--property__form{
+                .grid{
+                grid-template-columns: 1fr;
+                p{
+                    margin-bottom: 10px;
+                }
+                }
+                .add__button{
+                    button{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .footer{
+        
+        flex-direction: column;
+        .address{
+            .phone-print{
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    }
+
 }
