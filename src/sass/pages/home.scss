@@ -553,6 +553,7 @@ border-radius: 6.72761px;
 @media(max-width:767px){
     .header{
         .nav{
+            width: 90%;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
@@ -603,7 +604,7 @@ border-radius: 6.72761px;
     }
 }
     .main{
-        
+        width: 90%;
         p{
             text-align: center;
         }
@@ -617,10 +618,12 @@ border-radius: 6.72761px;
             &__list{
                 width: 100%;
                 grid-template-columns: 1fr 1fr;
+                gap: 10px;
             }
         }
     }
     .property{
+        width: 90%;
         .property__container{
             flex-direction: column;
             align-items: center;
@@ -633,6 +636,13 @@ border-radius: 6.72761px;
             &__item{
                 align-items: center;
                 justify-content: center;
+            }
+        }
+        .property__pagination{
+            &__handle{
+                span{
+                    padding: 15px;
+                }
             }
         }
     }
